@@ -1,0 +1,123 @@
+/* Estilos generales del body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(234, 29%, 20%); /* Color de fondo oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: hsl(0, 0%, 100%); /* Fondo blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+/* Estilos para la sección de contenido */
+.content {
+    padding: 40px;
+    flex: 1;
+}
+
+/* Estilos para el título principal */
+h1 {
+    color: #2d2a36;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la lista de beneficios */
+ul {
+    list-style-image: url(/images/icon-list.svg);
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #3b3c45;
+}
+
+/* Añade un check antes de cada elemento de la lista */
+li::before {
+    content: '✓';
+    color: #ff6347; /* Color tomate */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para el formulario */
+form {
+    margin-top: 30px;
+}
+
+/* Estilos para el campo de email */
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #97979e;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Estilos para el botón de envío */
+button {
+    background-color: #ff6347; /* Color tomate */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4500; /* Color tomate más oscuro al pasar el mouse */
+}
+
+/* Estilos para el contenedor de la imagen */
+.image-container {
+    background: linear-gradient(45deg, #ff6347, #ff8c00); /* Gradiente de fondo */    border-radius: 15px; /* Bordes redondeados */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Placeholder para la imagen */
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 1440px) {
+    .container {
+        flex-direction: column-reverse;
+        margin: 20px;
+    }
+
+    .image-container {
+        padding: 20px;
+    }
+}
